@@ -1,0 +1,38 @@
+{
+    "variables": {
+        "project_id": "",
+        "source_image": ""
+    },
+
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `project_id`}}",
+            "image_name": "reddit-base-{{timestamp}}",
+            "source_image": "{{user `source_image`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `machine_type`}}",
+            "image_description": "My first reddit image!",
+            "disk_size": 11,
+            "disk_type": "pd-standard",
+            "network": "default",
+            "tags": "puma-server"
+        }
+    ],
+
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_ruby.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/deploy.sh"
+        }
+    ]
+}

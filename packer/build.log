@@ -1,0 +1,590 @@
+[1;32mgooglecompute output will be in this color.[0m
+
+[1;32m==> googlecompute: Checking image does not exist...[0m
+[1;32m==> googlecompute: Creating temporary SSH key for instance...[0m
+[1;32m==> googlecompute: Using image: ubuntu-1604-xenial-v20190306[0m
+[1;32m==> googlecompute: Creating instance...[0m
+[0;32m    googlecompute: Loading zone: europe-west1-b[0m
+[0;32m    googlecompute: Loading machine type: f1-micro[0m
+[0;32m    googlecompute: Requesting instance creation...[0m
+[0;32m    googlecompute: Waiting for creation operation to complete...[0m
+[0;32m    googlecompute: Instance has been created![0m
+[1;32m==> googlecompute: Waiting for the instance to become running...[0m
+[0;32m    googlecompute: IP: 35.195.237.232[0m
+[1;32m==> googlecompute: Using ssh communicator to connect: 35.195.237.232[0m
+[1;32m==> googlecompute: Waiting for SSH to become available...[0m
+[1;32m==> googlecompute: Connected to SSH![0m
+[1;32m==> googlecompute: Provisioning with shell script: scripts/install_ruby.sh[0m
+[0;32m    googlecompute: Install Ruby and Bundler...[0m
+[0;32m    googlecompute: Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial InRelease[0m
+[0;32m    googlecompute: Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB][0m
+[0;32m    googlecompute: Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB][0m
+[0;32m    googlecompute: Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB][0m
+[0;32m    googlecompute: Get:5 http://archive.canonical.com/ubuntu xenial InRelease [11.5 kB][0m
+[0;32m    googlecompute: Get:6 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main Sources [868 kB][0m
+[0;32m    googlecompute: Get:7 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/restricted Sources [4,808 B][0m
+[0;32m    googlecompute: Get:8 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe Sources [7,728 kB][0m
+[0;32m    googlecompute: Get:9 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/multiverse Sources [179 kB][0m
+[0;32m    googlecompute: Get:10 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [7,532 kB][0m
+[0;32m    googlecompute: Get:11 http://archive.canonical.com/ubuntu xenial/partner amd64 Packages [3,132 B][0m
+[0;32m    googlecompute: Get:12 http://archive.canonical.com/ubuntu xenial/partner Translation-en [1,616 B][0m
+[0;32m    googlecompute: Get:13 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe Translation-en [4,354 kB][0m
+[0;32m    googlecompute: Get:14 http://security.ubuntu.com/ubuntu xenial-security/main Sources [144 kB][0m
+[0;32m    googlecompute: Get:15 http://security.ubuntu.com/ubuntu xenial-security/restricted Sources [2,116 B][0m
+[0;32m    googlecompute: Get:16 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [103 kB][0m
+[0;32m    googlecompute: Get:17 http://security.ubuntu.com/ubuntu xenial-security/multiverse Sources [3,416 B][0m
+[0;32m    googlecompute: Get:18 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [626 kB][0m
+[0;32m    googlecompute: Get:19 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [259 kB][0m
+[0;32m    googlecompute: Get:20 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [430 kB][0m
+[0;32m    googlecompute: Get:21 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [173 kB][0m
+[0;32m    googlecompute: Get:22 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [144 kB][0m
+[0;32m    googlecompute: Get:23 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/multiverse Translation-en [106 kB][0m
+[0;32m    googlecompute: Get:24 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [5,604 B][0m
+[0;32m    googlecompute: Get:25 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main Sources [332 kB][0m
+[0;32m    googlecompute: Get:26 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [2,536 B][0m
+[0;32m    googlecompute: Get:27 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/universe Sources [252 kB][0m
+[0;32m    googlecompute: Get:28 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [2,676 B][0m
+[0;32m    googlecompute: Get:29 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/multiverse Sources [8,764 B][0m
+[0;32m    googlecompute: Get:30 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [925 kB][0m
+[0;32m    googlecompute: Get:31 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main Translation-en [372 kB][0m
+[0;32m    googlecompute: Get:32 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [7,616 B][0m
+[0;32m    googlecompute: Get:33 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/restricted Translation-en [2,272 B][0m
+[0;32m    googlecompute: Get:34 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [740 kB][0m
+[0;32m    googlecompute: Get:35 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [307 kB][0m
+[0;32m    googlecompute: Get:36 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [16.7 kB][0m
+[0;32m    googlecompute: Get:37 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [8,440 B][0m
+[0;32m    googlecompute: Get:38 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/main Sources [4,848 B][0m
+[0;32m    googlecompute: Get:39 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/universe Sources [6,740 B][0m
+[0;32m    googlecompute: Get:40 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7,280 B][0m
+[0;32m    googlecompute: Get:41 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [4,456 B][0m
+[0;32m    googlecompute: Get:42 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [7,804 B][0m
+[0;32m    googlecompute: Get:43 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [4,184 B][0m
+[0;32m    googlecompute: Fetched 26.0 MB in 6s (4,264 kB/s)[0m
+[0;32m    googlecompute: Reading package lists...[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: Reading package lists...[0m
+[0;32m    googlecompute: Building dependency tree...[0m
+[0;32m    googlecompute: Reading state information...[0m
+[0;32m    googlecompute: The following additional packages will be installed:[0m
+[0;32m    googlecompute:   binutils cpp cpp-5 dpkg-dev fakeroot fontconfig-config fonts-dejavu-core[0m
+[0;32m    googlecompute:   fonts-lato g++ g++-5 gcc gcc-5 javascript-common libalgorithm-diff-perl[0m
+[0;32m    googlecompute:   libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan2 libatomic1[0m
+[0;32m    googlecompute:   libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdpkg-perl libfakeroot[0m
+[0;32m    googlecompute:   libfile-fcntllock-perl libfontconfig1 libgcc-5-dev libgmp-dev libgmpxx4ldbl[0m
+[0;32m    googlecompute:   libgomp1 libisl15 libitm1 libjs-jquery liblsan0 libmpc3 libmpx0 libquadmath0[0m
+[0;32m    googlecompute:   libruby2.3 libstdc++-5-dev libtcl8.6 libtcltk-ruby libtk8.6 libtsan0[0m
+[0;32m    googlecompute:   libubsan0 libxft2 libxrender1 libxss1 linux-libc-dev make manpages-dev rake[0m
+[0;32m    googlecompute:   ri ruby ruby-dev ruby-did-you-mean ruby-minitest ruby-molinillo[0m
+[0;32m    googlecompute:   ruby-net-http-persistent ruby-net-telnet ruby-power-assert ruby-test-unit[0m
+[0;32m    googlecompute:   ruby-thor ruby2.3 ruby2.3-dev ruby2.3-doc ruby2.3-tcltk rubygems-integration[0m
+[0;32m    googlecompute:   unzip x11-common zip[0m
+[0;32m    googlecompute: Suggested packages:[0m
+[0;32m    googlecompute:   binutils-doc cpp-doc gcc-5-locales debian-keyring g++-multilib[0m
+[0;32m    googlecompute:   g++-5-multilib gcc-5-doc libstdc++6-5-dbg gcc-multilib autoconf automake[0m
+[0;32m    googlecompute:   libtool flex bison gdb gcc-doc gcc-5-multilib libgcc1-dbg libgomp1-dbg[0m
+[0;32m    googlecompute:   libitm1-dbg libatomic1-dbg libasan2-dbg liblsan0-dbg libtsan0-dbg[0m
+[0;32m    googlecompute:   libubsan0-dbg libcilkrts5-dbg libmpx0-dbg libquadmath0-dbg apache2[0m
+[0;32m    googlecompute:   | lighttpd | httpd glibc-doc gmp-doc libgmp10-doc libmpfr-dev[0m
+[0;32m    googlecompute:   libstdc++-5-doc tcl8.6 tk8.6 make-doc bundler[0m
+[0;32m    googlecompute: The following NEW packages will be installed:[0m
+[0;32m    googlecompute:   binutils build-essential cpp cpp-5 dpkg-dev fakeroot fontconfig-config[0m
+[0;32m    googlecompute:   fonts-dejavu-core fonts-lato g++ g++-5 gcc gcc-5 javascript-common[0m
+[0;32m    googlecompute:   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl[0m
+[0;32m    googlecompute:   libasan2 libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libdpkg-perl[0m
+[0;32m    googlecompute:   libfakeroot libfile-fcntllock-perl libfontconfig1 libgcc-5-dev libgmp-dev[0m
+[0;32m    googlecompute:   libgmpxx4ldbl libgomp1 libisl15 libitm1 libjs-jquery liblsan0 libmpc3[0m
+[0;32m    googlecompute:   libmpx0 libquadmath0 libruby2.3 libstdc++-5-dev libtcl8.6 libtcltk-ruby[0m
+[0;32m    googlecompute:   libtk8.6 libtsan0 libubsan0 libxft2 libxrender1 libxss1 linux-libc-dev make[0m
+[0;32m    googlecompute:   manpages-dev rake ri ruby ruby-bundler ruby-dev ruby-did-you-mean ruby-full[0m
+[0;32m    googlecompute:   ruby-minitest ruby-molinillo ruby-net-http-persistent ruby-net-telnet[0m
+[0;32m    googlecompute:   ruby-power-assert ruby-test-unit ruby-thor ruby2.3 ruby2.3-dev ruby2.3-doc[0m
+[0;32m    googlecompute:   ruby2.3-tcltk rubygems-integration unzip x11-common zip[0m
+[0;32m    googlecompute: 0 upgraded, 73 newly installed, 0 to remove and 18 not upgraded.[0m
+[0;32m    googlecompute: Need to get 52.6 MB of archives.[0m
+[0;32m    googlecompute: After this operation, 220 MB of additional disk space will be used.[0m
+[0;32m    googlecompute: Get:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 fonts-lato all 2.0-1 [2,693 kB][0m
+[0;32m    googlecompute: Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-core all 2.35-1 [1,039 kB][0m
+[0;32m    googlecompute: Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig-config all 2.11.94-0ubuntu1.1 [49.9 kB][0m
+[0;32m    googlecompute: Get:4 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfontconfig1 amd64 2.11.94-0ubuntu1.1 [131 kB][0m
+[0;32m    googlecompute: Get:5 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libxrender1 amd64 1:0.9.9-0ubuntu1 [18.5 kB][0m
+[0;32m    googlecompute: Get:6 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libxft2 amd64 2.3.2-1 [36.1 kB][0m
+[0;32m    googlecompute: Get:7 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 x11-common all 1:7.7+13ubuntu3.1 [22.9 kB][0m
+[0;32m    googlecompute: Get:8 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libxss1 amd64 1:1.2.2-1 [8,582 B][0m
+[0;32m    googlecompute: Get:9 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB][0m
+[0;32m    googlecompute: Get:10 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.8 [2,312 kB][0m
+[0;32m    googlecompute: Get:11 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu11 [68.5 kB][0m
+[0;32m    googlecompute: Get:12 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-libc-dev amd64 4.4.0-143.169 [870 kB][0m
+[0;32m    googlecompute: Get:13 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu11 [2,086 kB][0m
+[0;32m    googlecompute: Get:14 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libisl15 amd64 0.16.1-1 [524 kB][0m
+[0;32m    googlecompute: Get:15 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.11 [7,660 kB][0m
+[0;32m    googlecompute: Get:16 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 cpp amd64 4:5.3.1-1ubuntu1 [27.7 kB][0m
+[0;32m    googlecompute: Get:17 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.11 [38.8 kB][0m
+[0;32m    googlecompute: Get:18 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.11 [55.0 kB][0m
+[0;32m    googlecompute: Get:19 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.11 [27.4 kB][0m
+[0;32m    googlecompute: Get:20 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.11 [8,896 B][0m
+[0;32m    googlecompute: Get:21 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.11 [264 kB][0m
+[0;32m    googlecompute: Get:22 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.11 [105 kB][0m
+[0;32m    googlecompute: Get:23 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.11 [244 kB][0m
+[0;32m    googlecompute: Get:24 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.11 [95.4 kB][0m
+[0;32m    googlecompute: Get:25 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.11 [40.1 kB][0m
+[0;32m    googlecompute: Get:26 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.11 [9,748 B][0m
+[0;32m    googlecompute: Get:27 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.11 [131 kB][0m
+[0;32m    googlecompute: Get:28 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [2,229 kB][0m
+[0;32m    googlecompute: Get:29 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.11 [8,417 kB][0m
+[0;32m    googlecompute: Get:30 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 gcc amd64 4:5.3.1-1ubuntu1 [5,244 B][0m
+[0;32m    googlecompute: Get:31 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [1,426 kB][0m
+[0;32m    googlecompute: Get:32 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.11 [8,310 kB][0m
+[0;32m    googlecompute: Get:33 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1,504 B][0m
+[0;32m    googlecompute: Get:34 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 make amd64 4.1-6 [151 kB][0m
+[0;32m    googlecompute: Get:35 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.5 [195 kB][0m
+[0;32m    googlecompute: Get:36 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.5 [584 kB][0m
+[0;32m    googlecompute: Get:37 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 build-essential amd64 12.1ubuntu2 [4,758 B][0m
+[0;32m    googlecompute: Get:38 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libfakeroot amd64 1.20.2-1ubuntu1 [25.5 kB][0m
+[0;32m    googlecompute: Get:39 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 fakeroot amd64 1.20.2-1ubuntu1 [61.8 kB][0m
+[0;32m    googlecompute: Get:40 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 javascript-common all 11 [6,066 B][0m
+[0;32m    googlecompute: Get:41 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB][0m
+[0;32m    googlecompute: Get:42 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4build1 [11.0 kB][0m
+[0;32m    googlecompute: Get:43 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB][0m
+[0;32m    googlecompute: Get:44 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libfile-fcntllock-perl amd64 0.22-3 [32.0 kB][0m
+[0;32m    googlecompute: Get:45 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libgmpxx4ldbl amd64 2:6.1.0+dfsg-2 [8,948 B][0m
+[0;32m    googlecompute: Get:46 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libgmp-dev amd64 2:6.1.0+dfsg-2 [314 kB][0m
+[0;32m    googlecompute: Get:47 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libjs-jquery all 1.11.3+dfsg-4 [161 kB][0m
+[0;32m    googlecompute: Get:48 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libtcl8.6 amd64 8.6.5+dfsg-2 [875 kB][0m
+[0;32m    googlecompute: Get:49 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 rubygems-integration all 1.10 [4,966 B][0m
+[0;32m    googlecompute: Get:50 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ruby2.3 amd64 2.3.1-2~16.04.11 [41.0 kB][0m
+[0;32m    googlecompute: Get:51 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby all 1:2.3.0+1 [5,530 B][0m
+[0;32m    googlecompute: Get:52 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 rake all 10.5.0-2 [48.2 kB][0m
+[0;32m    googlecompute: Get:53 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-did-you-mean all 1.0.0-2 [8,390 B][0m
+[0;32m    googlecompute: Get:54 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-minitest all 5.8.4-2 [36.6 kB][0m
+[0;32m    googlecompute: Get:55 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-net-telnet all 0.1.1-2 [12.6 kB][0m
+[0;32m    googlecompute: Get:56 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-power-assert all 0.2.7-1 [7,668 B][0m
+[0;32m    googlecompute: Get:57 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-test-unit all 3.1.7-2 [60.3 kB][0m
+[0;32m    googlecompute: Get:58 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libruby2.3 amd64 2.3.1-2~16.04.11 [2,958 kB][0m
+[0;32m    googlecompute: Get:59 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 libtk8.6 amd64 8.6.5-1 [693 kB][0m
+[0;32m    googlecompute: Get:60 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 ruby2.3-tcltk amd64 2.3.1-2~16.04.11 [276 kB][0m
+[0;32m    googlecompute: Get:61 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 libtcltk-ruby all 1:2.3.0+1 [4,138 B][0m
+[0;32m    googlecompute: Get:62 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 manpages-dev all 4.04-2 [2,048 kB][0m
+[0;32m    googlecompute: Get:63 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ruby2.3-doc all 2.3.1-2~16.04.11 [3,383 kB][0m
+[0;32m    googlecompute: Get:64 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ri all 1:2.3.0+1 [4,274 B][0m
+[0;32m    googlecompute: Get:65 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ruby-molinillo all 0.4.3-1 [12.1 kB][0m
+[0;32m    googlecompute: Get:66 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ruby-net-http-persistent all 2.9.4-1 [15.9 kB][0m
+[0;32m    googlecompute: Get:67 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ruby-thor all 0.19.1-2 [43.7 kB][0m
+[0;32m    googlecompute: Get:68 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ruby-bundler all 1.11.2-1 [122 kB][0m
+[0;32m    googlecompute: Get:69 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ruby2.3-dev amd64 2.3.1-2~16.04.11 [1,034 kB][0m
+[0;32m    googlecompute: Get:70 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 ruby-dev amd64 1:2.3.0+1 [4,408 B][0m
+[0;32m    googlecompute: Get:71 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/universe amd64 ruby-full all 1:2.3.0+1 [2,558 B][0m
+[0;32m    googlecompute: Get:72 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 unzip amd64 6.0-20ubuntu1 [158 kB][0m
+[0;32m    googlecompute: Get:73 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial/main amd64 zip amd64 3.0-11 [158 kB][0m
+[0;32m    googlecompute: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    googlecompute: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    googlecompute: debconf: falling back to frontend: Readline[0m
+[0;32m    googlecompute: debconf: unable to initialize frontend: Readline[0m
+[0;32m    googlecompute: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    googlecompute: debconf: falling back to frontend: Teletype[0m
+[0;32m    googlecompute: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    googlecompute: Fetched 52.6 MB in 4s (11.7 MB/s)[0m
+[0;32m    googlecompute: Selecting previously unselected package fonts-lato.[0m
+[0;32m    googlecompute: (Reading database ... 71068 files and directories currently installed.)[0m
+[0;32m    googlecompute: Preparing to unpack .../fonts-lato_2.0-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking fonts-lato (2.0-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package fonts-dejavu-core.[0m
+[0;32m    googlecompute: Preparing to unpack .../fonts-dejavu-core_2.35-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking fonts-dejavu-core (2.35-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package fontconfig-config.[0m
+[0;32m    googlecompute: Preparing to unpack .../fontconfig-config_2.11.94-0ubuntu1.1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking fontconfig-config (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libfontconfig1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libxrender1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libxrender1_1%3a0.9.9-0ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libxrender1:amd64 (1:0.9.9-0ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libxft2:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libxft2_2.3.2-1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libxft2:amd64 (2.3.2-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package x11-common.[0m
+[0;32m    googlecompute: Preparing to unpack .../x11-common_1%3a7.7+13ubuntu3.1_all.deb ...[0m
+[0;32m    googlecompute: dpkg-query: no packages found matching nux-tools[0m
+[0;32m    googlecompute: Unpacking x11-common (1:7.7+13ubuntu3.1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libxss1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libxss1_1%3a1.2.2-1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libxss1:amd64 (1:1.2.2-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libmpc3:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libmpc3_1.0.3-1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libmpc3:amd64 (1.0.3-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package binutils.[0m
+[0;32m    googlecompute: Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.8_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking binutils (2.26.1-1ubuntu1~16.04.8) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libc-dev-bin.[0m
+[0;32m    googlecompute: Preparing to unpack .../libc-dev-bin_2.23-0ubuntu11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libc-dev-bin (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package linux-libc-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../linux-libc-dev_4.4.0-143.169_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking linux-libc-dev:amd64 (4.4.0-143.169) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libc6-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libc6-dev_2.23-0ubuntu11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libc6-dev:amd64 (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libisl15:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libisl15_0.16.1-1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libisl15:amd64 (0.16.1-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package cpp-5.[0m
+[0;32m    googlecompute: Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package cpp.[0m
+[0;32m    googlecompute: Preparing to unpack .../cpp_4%3a5.3.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking cpp (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libcc1-0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libgomp1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libitm1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libatomic1:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libasan2:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package liblsan0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libtsan0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libubsan0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libcilkrts5:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libmpx0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libquadmath0:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libgcc-5-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package gcc-5.[0m
+[0;32m    googlecompute: Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package gcc.[0m
+[0;32m    googlecompute: Preparing to unpack .../gcc_4%3a5.3.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking gcc (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libstdc++-5-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package g++-5.[0m
+[0;32m    googlecompute: Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking g++-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package g++.[0m
+[0;32m    googlecompute: Preparing to unpack .../g++_4%3a5.3.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking g++ (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package make.[0m
+[0;32m    googlecompute: Preparing to unpack .../archives/make_4.1-6_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking make (4.1-6) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libdpkg-perl.[0m
+[0;32m    googlecompute: Preparing to unpack .../libdpkg-perl_1.18.4ubuntu1.5_all.deb ...[0m
+[0;32m    googlecompute: Unpacking libdpkg-perl (1.18.4ubuntu1.5) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package dpkg-dev.[0m
+[0;32m    googlecompute: Preparing to unpack .../dpkg-dev_1.18.4ubuntu1.5_all.deb ...[0m
+[0;32m    googlecompute: Unpacking dpkg-dev (1.18.4ubuntu1.5) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package build-essential.[0m
+[0;32m    googlecompute: Preparing to unpack .../build-essential_12.1ubuntu2_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking build-essential (12.1ubuntu2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libfakeroot:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libfakeroot_1.20.2-1ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libfakeroot:amd64 (1.20.2-1ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package fakeroot.[0m
+[0;32m    googlecompute: Preparing to unpack .../fakeroot_1.20.2-1ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking fakeroot (1.20.2-1ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package javascript-common.[0m
+[0;32m    googlecompute: Preparing to unpack .../javascript-common_11_all.deb ...[0m
+[0;32m    googlecompute: Unpacking javascript-common (11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libalgorithm-diff-perl.[0m
+[0;32m    googlecompute: Preparing to unpack .../libalgorithm-diff-perl_1.19.03-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking libalgorithm-diff-perl (1.19.03-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libalgorithm-diff-xs-perl.[0m
+[0;32m    googlecompute: Preparing to unpack .../libalgorithm-diff-xs-perl_0.04-4build1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libalgorithm-diff-xs-perl (0.04-4build1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libalgorithm-merge-perl.[0m
+[0;32m    googlecompute: Preparing to unpack .../libalgorithm-merge-perl_0.08-3_all.deb ...[0m
+[0;32m    googlecompute: Unpacking libalgorithm-merge-perl (0.08-3) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libfile-fcntllock-perl.[0m
+[0;32m    googlecompute: Preparing to unpack .../libfile-fcntllock-perl_0.22-3_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libfile-fcntllock-perl (0.22-3) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libgmpxx4ldbl:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libgmpxx4ldbl_2%3a6.1.0+dfsg-2_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libgmpxx4ldbl:amd64 (2:6.1.0+dfsg-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libgmp-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libgmp-dev_2%3a6.1.0+dfsg-2_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libgmp-dev:amd64 (2:6.1.0+dfsg-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libjs-jquery.[0m
+[0;32m    googlecompute: Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ...[0m
+[0;32m    googlecompute: Unpacking libjs-jquery (1.11.3+dfsg-4) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libtcl8.6:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libtcl8.6_8.6.5+dfsg-2_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libtcl8.6:amd64 (8.6.5+dfsg-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package rubygems-integration.[0m
+[0;32m    googlecompute: Preparing to unpack .../rubygems-integration_1.10_all.deb ...[0m
+[0;32m    googlecompute: Unpacking rubygems-integration (1.10) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby2.3.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby2.3_2.3.1-2~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby2.3 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby_1%3a2.3.0+1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package rake.[0m
+[0;32m    googlecompute: Preparing to unpack .../archives/rake_10.5.0-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking rake (10.5.0-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-did-you-mean.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-did-you-mean_1.0.0-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-did-you-mean (1.0.0-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-minitest.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-minitest_5.8.4-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-minitest (5.8.4-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-net-telnet.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-net-telnet_0.1.1-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-net-telnet (0.1.1-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-power-assert.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-power-assert_0.2.7-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-power-assert (0.2.7-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-test-unit.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-test-unit_3.1.7-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-test-unit (3.1.7-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libruby2.3:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libruby2.3_2.3.1-2~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libruby2.3:amd64 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libtk8.6:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../libtk8.6_8.6.5-1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking libtk8.6:amd64 (8.6.5-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby2.3-tcltk.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby2.3-tcltk_2.3.1-2~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby2.3-tcltk (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package libtcltk-ruby.[0m
+[0;32m    googlecompute: Preparing to unpack .../libtcltk-ruby_1%3a2.3.0+1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking libtcltk-ruby (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package manpages-dev.[0m
+[0;32m    googlecompute: Preparing to unpack .../manpages-dev_4.04-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking manpages-dev (4.04-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby2.3-doc.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby2.3-doc_2.3.1-2~16.04.11_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby2.3-doc (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ri.[0m
+[0;32m    googlecompute: Preparing to unpack .../ri_1%3a2.3.0+1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ri (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-molinillo.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-molinillo_0.4.3-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-molinillo (0.4.3-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-net-http-persistent.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-net-http-persistent_2.9.4-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-net-http-persistent (2.9.4-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-thor.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-thor_0.19.1-2_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-thor (0.19.1-2) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-bundler.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-bundler_1.11.2-1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-bundler (1.11.2-1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby2.3-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby2.3-dev_2.3.1-2~16.04.11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby2.3-dev:amd64 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-dev:amd64.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-dev_1%3a2.3.0+1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-dev:amd64 (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package ruby-full.[0m
+[0;32m    googlecompute: Preparing to unpack .../ruby-full_1%3a2.3.0+1_all.deb ...[0m
+[0;32m    googlecompute: Unpacking ruby-full (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package unzip.[0m
+[0;32m    googlecompute: Preparing to unpack .../unzip_6.0-20ubuntu1_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking unzip (6.0-20ubuntu1) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package zip.[0m
+[0;32m    googlecompute: Preparing to unpack .../archives/zip_3.0-11_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking zip (3.0-11) ...[0m
+[0;32m    googlecompute: Processing triggers for man-db (2.7.5-1) ...[0m
+[0;32m    googlecompute: Processing triggers for libc-bin (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Processing triggers for systemd (229-4ubuntu21.16) ...[0m
+[0;32m    googlecompute: Processing triggers for ureadahead (0.100.0-19) ...[0m
+[0;32m    googlecompute: Processing triggers for mime-support (3.59ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up fonts-lato (2.0-1) ...[0m
+[0;32m    googlecompute: Setting up fonts-dejavu-core (2.35-1) ...[0m
+[0;32m    googlecompute: Setting up fontconfig-config (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    googlecompute: Setting up libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    googlecompute: Setting up libxrender1:amd64 (1:0.9.9-0ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up libxft2:amd64 (2.3.2-1) ...[0m
+[0;32m    googlecompute: Setting up x11-common (1:7.7+13ubuntu3.1) ...[0m
+[0;32m    googlecompute: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    googlecompute: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    googlecompute: debconf: falling back to frontend: Readline[0m
+[0;32m    googlecompute: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults[0m
+[0;32m    googlecompute: Setting up libxss1:amd64 (1:1.2.2-1) ...[0m
+[0;32m    googlecompute: Setting up libmpc3:amd64 (1.0.3-1) ...[0m
+[0;32m    googlecompute: Setting up binutils (2.26.1-1ubuntu1~16.04.8) ...[0m
+[0;32m    googlecompute: Setting up libc-dev-bin (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Setting up linux-libc-dev:amd64 (4.4.0-143.169) ...[0m
+[0;32m    googlecompute: Setting up libc6-dev:amd64 (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Setting up libisl15:amd64 (0.16.1-1) ...[0m
+[0;32m    googlecompute: Setting up cpp-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up cpp (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up gcc-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up gcc (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up g++-5 (5.4.0-6ubuntu1~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up g++ (4:5.3.1-1ubuntu1) ...[0m
+[0;32m    googlecompute: update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode[0m
+[0;32m    googlecompute: Setting up make (4.1-6) ...[0m
+[0;32m    googlecompute: Setting up libdpkg-perl (1.18.4ubuntu1.5) ...[0m
+[0;32m    googlecompute: Setting up dpkg-dev (1.18.4ubuntu1.5) ...[0m
+[0;32m    googlecompute: Setting up build-essential (12.1ubuntu2) ...[0m
+[0;32m    googlecompute: Setting up libfakeroot:amd64 (1.20.2-1ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up fakeroot (1.20.2-1ubuntu1) ...[0m
+[0;32m    googlecompute: update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode[0m
+[0;32m    googlecompute: Setting up javascript-common (11) ...[0m
+[0;32m    googlecompute: Setting up libalgorithm-diff-perl (1.19.03-1) ...[0m
+[0;32m    googlecompute: Setting up libalgorithm-diff-xs-perl (0.04-4build1) ...[0m
+[0;32m    googlecompute: Setting up libalgorithm-merge-perl (0.08-3) ...[0m
+[0;32m    googlecompute: Setting up libfile-fcntllock-perl (0.22-3) ...[0m
+[0;32m    googlecompute: Setting up libgmpxx4ldbl:amd64 (2:6.1.0+dfsg-2) ...[0m
+[0;32m    googlecompute: Setting up libgmp-dev:amd64 (2:6.1.0+dfsg-2) ...[0m
+[0;32m    googlecompute: Setting up libjs-jquery (1.11.3+dfsg-4) ...[0m
+[0;32m    googlecompute: Setting up libtcl8.6:amd64 (8.6.5+dfsg-2) ...[0m
+[0;32m    googlecompute: Setting up rubygems-integration (1.10) ...[0m
+[0;32m    googlecompute: Setting up ruby-did-you-mean (1.0.0-2) ...[0m
+[0;32m    googlecompute: Setting up ruby-minitest (5.8.4-2) ...[0m
+[0;32m    googlecompute: Setting up ruby-net-telnet (0.1.1-2) ...[0m
+[0;32m    googlecompute: Setting up ruby-power-assert (0.2.7-1) ...[0m
+[0;32m    googlecompute: Setting up ruby-test-unit (3.1.7-2) ...[0m
+[0;32m    googlecompute: Setting up libtk8.6:amd64 (8.6.5-1) ...[0m
+[0;32m    googlecompute: Setting up manpages-dev (4.04-2) ...[0m
+[0;32m    googlecompute: Setting up ruby2.3-doc (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up unzip (6.0-20ubuntu1) ...[0m
+[0;32m    googlecompute: Setting up zip (3.0-11) ...[0m
+[0;32m    googlecompute: Setting up ruby2.3 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up ruby (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Setting up ri (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Setting up ruby-molinillo (0.4.3-1) ...[0m
+[0;32m    googlecompute: Setting up ruby-net-http-persistent (2.9.4-1) ...[0m
+[0;32m    googlecompute: Setting up ruby-thor (0.19.1-2) ...[0m
+[0;32m    googlecompute: Setting up ruby-bundler (1.11.2-1) ...[0m
+[0;32m    googlecompute: Setting up rake (10.5.0-2) ...[0m
+[0;32m    googlecompute: Setting up libruby2.3:amd64 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up ruby2.3-tcltk (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up libtcltk-ruby (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Setting up ruby2.3-dev:amd64 (2.3.1-2~16.04.11) ...[0m
+[0;32m    googlecompute: Setting up ruby-dev:amd64 (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Setting up ruby-full (1:2.3.0+1) ...[0m
+[0;32m    googlecompute: Processing triggers for libc-bin (2.23-0ubuntu11) ...[0m
+[0;32m    googlecompute: Processing triggers for systemd (229-4ubuntu21.16) ...[0m
+[0;32m    googlecompute: Processing triggers for ureadahead (0.100.0-19) ...[0m
+[1;32m==> googlecompute: Provisioning with shell script: scripts/install_mongodb.sh[0m
+[0;32m    googlecompute: Install MongoDB...[0m
+[0;32m    googlecompute: Executing: /tmp/tmp.4PdjFJY0tm/gpg.1.sh --keyserver[0m
+[0;32m    googlecompute: hkp://keyserver.ubuntu.com:80[0m
+[0;32m    googlecompute: --recv[0m
+[0;32m    googlecompute: EA312927[0m
+[0;32m    googlecompute: gpg: requesting key EA312927 from hkp server keyserver.ubuntu.com[0m
+[0;32m    googlecompute: gpg: key EA312927: public key "MongoDB 3.2 Release Signing Key <packaging@mongodb.com>" imported[0m
+[0;32m    googlecompute: gpg: key EA312927: public key "Totally Legit Signing Key <mallory@example.org>" imported[0m
+[0;32m    googlecompute: gpg: Total number processed: 2[0m
+[0;32m    googlecompute: gpg:               imported: 2  (RSA: 2)[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial InRelease[0m
+[0;32m    googlecompute: Hit:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-updates InRelease[0m
+[0;32m    googlecompute: Hit:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu xenial-backports InRelease[0m
+[0;32m    googlecompute: Hit:4 http://archive.canonical.com/ubuntu xenial InRelease[0m
+[0;32m    googlecompute: Hit:5 http://security.ubuntu.com/ubuntu xenial-security InRelease[0m
+[0;32m    googlecompute: Ign:6 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 InRelease[0m
+[0;32m    googlecompute: Get:7 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release [3,462 B][0m
+[0;32m    googlecompute: Get:8 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 Release.gpg [801 B][0m
+[0;32m    googlecompute: Get:9 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 Packages [11.2 kB][0m
+[0;32m    googlecompute: Fetched 15.5 kB in 2s (5,187 B/s)[0m
+[0;32m    googlecompute: Reading package lists...[0m
+[0;32m    googlecompute: Building dependency tree...[0m
+[0;32m    googlecompute: Reading state information...[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: 18 packages can be upgraded. Run 'apt list --upgradable' to see them.[0m
+[0;32m    googlecompute: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.[0m
+[0;32m    googlecompute:[0m
+[0;32m    googlecompute: Reading package lists...[0m
+[0;32m    googlecompute: Building dependency tree...[0m
+[0;32m    googlecompute: Reading state information...[0m
+[0;32m    googlecompute: The following additional packages will be installed:[0m
+[0;32m    googlecompute:   mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools[0m
+[0;32m    googlecompute: The following NEW packages will be installed:[0m
+[0;32m    googlecompute:   mongodb-org mongodb-org-mongos mongodb-org-server mongodb-org-shell[0m
+[0;32m    googlecompute:   mongodb-org-tools[0m
+[0;32m    googlecompute: 0 upgraded, 5 newly installed, 0 to remove and 18 not upgraded.[0m
+[0;32m    googlecompute: Need to get 51.8 MB of archives.[0m
+[0;32m    googlecompute: After this operation, 215 MB of additional disk space will be used.[0m
+[0;32m    googlecompute: Get:1 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 mongodb-org-shell amd64 3.2.22 [5,278 kB][0m
+[0;32m    googlecompute: Get:2 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 mongodb-org-server amd64 3.2.22 [10.0 MB][0m
+[0;32m    googlecompute: Get:3 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 mongodb-org-mongos amd64 3.2.22 [4,679 kB][0m
+[0;32m    googlecompute: Get:4 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 mongodb-org-tools amd64 3.2.22 [31.8 MB][0m
+[0;32m    googlecompute: Get:5 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2/multiverse amd64 mongodb-org amd64 3.2.22 [3,564 B][0m
+[0;32m    googlecompute: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    googlecompute: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    googlecompute: debconf: falling back to frontend: Readline[0m
+[0;32m    googlecompute: debconf: unable to initialize frontend: Readline[0m
+[0;32m    googlecompute: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    googlecompute: debconf: falling back to frontend: Teletype[0m
+[0;32m    googlecompute: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    googlecompute: Fetched 51.8 MB in 5s (10.0 MB/s)[0m
+[0;32m    googlecompute: Selecting previously unselected package mongodb-org-shell.[0m
+[0;32m    googlecompute: (Reading database ... 93972 files and directories currently installed.)[0m
+[0;32m    googlecompute: Preparing to unpack .../mongodb-org-shell_3.2.22_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking mongodb-org-shell (3.2.22) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package mongodb-org-server.[0m
+[0;32m    googlecompute: Preparing to unpack .../mongodb-org-server_3.2.22_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking mongodb-org-server (3.2.22) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package mongodb-org-mongos.[0m
+[0;32m    googlecompute: Preparing to unpack .../mongodb-org-mongos_3.2.22_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking mongodb-org-mongos (3.2.22) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package mongodb-org-tools.[0m
+[0;32m    googlecompute: Preparing to unpack .../mongodb-org-tools_3.2.22_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking mongodb-org-tools (3.2.22) ...[0m
+[0;32m    googlecompute: Selecting previously unselected package mongodb-org.[0m
+[0;32m    googlecompute: Preparing to unpack .../mongodb-org_3.2.22_amd64.deb ...[0m
+[0;32m    googlecompute: Unpacking mongodb-org (3.2.22) ...[0m
+[0;32m    googlecompute: Processing triggers for man-db (2.7.5-1) ...[0m
+[0;32m    googlecompute: Setting up mongodb-org-shell (3.2.22) ...[0m
+[0;32m    googlecompute: Setting up mongodb-org-server (3.2.22) ...[0m
+[0;32m    googlecompute: Adding system user `mongodb' (UID 113) ...[0m
+[0;32m    googlecompute: Adding new user `mongodb' (UID 113) with group `nogroup' ...[0m
+[0;32m    googlecompute: Not creating home directory `/home/mongodb'.[0m
+[0;32m    googlecompute: Adding group `mongodb' (GID 117) ...[0m
+[0;32m    googlecompute: Done.[0m
+[0;32m    googlecompute: Adding user `mongodb' to group `mongodb' ...[0m
+[0;32m    googlecompute: Adding user mongodb to group mongodb[0m
+[0;32m    googlecompute: Done.[0m
+[0;32m    googlecompute: Setting up mongodb-org-mongos (3.2.22) ...[0m
+[0;32m    googlecompute: Setting up mongodb-org-tools (3.2.22) ...[0m
+[0;32m    googlecompute: Setting up mongodb-org (3.2.22) ...[0m
+[0;32m    googlecompute: Created symlink from /etc/systemd/system/multi-user.target.wants/mongod.service to /lib/systemd/system/mongod.service.[0m
+[1;32m==> googlecompute: Deleting instance...[0m
+[0;32m    googlecompute: Instance has been deleted![0m
+[1;32m==> googlecompute: Creating image...[0m
+[1;32m==> googlecompute: Deleting disk...[0m
+[0;32m    googlecompute: Disk has been deleted![0m
+[1;32mBuild 'googlecompute' finished.[0m
+
+==> Builds finished. The artifacts of successful builds are:
+--> googlecompute: A disk image was created: reddit-base-1553337479
